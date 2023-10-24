@@ -1,3 +1,37 @@
-<p>
-  serie works!
-</p>
+<div class="container mt-3">
+  <div class="row">
+      <div class="col-6">
+          <table class="table table-light" id="tabla-datos">
+              <thead class="table-dark">
+                  <tr>
+                      <th>#</th>
+                      <th>Name</th>
+                      <th>Channel</th>
+                      <th>Seasons</th>
+                  </tr>
+              </thead>
+              <tbody id="series">
+                <tr *ngFor="let c of series">
+                    <th>
+                      <dd>{{c.id}}</dd>
+                    </th>
+                    <td class="text-primary">
+                      <dd>{{c.name}}</dd>
+                    </td>
+                    <td>
+                      <dd>{{c.channel}}</dd>
+                    </td>
+                    <td>
+                        <dd>{{c.seasons}}</dd>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+
+          <p id="average">Seasons average: {{average}}</p>
+      </div>
+
+      <div class="col-3" id="container-card"></div>
+  </div>
+
+</div>
